@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tournament by Faravhi — Free Fire Gaming Tournament Platform" />
+  <title>Tournament by Faravhi | Free Fire Tournaments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Tournament by Faravhi home">
+        <span class="brand-mark">F</span>
+        <span>
+          <strong>TOURNAMENT</strong>
+          <small>BY FARAVHI</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#tournaments">Tournaments</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#teams">Teams</a>
+        <a href="#rules">Rules</a>
+        <a href="#winners">Winners</a>
+        <button class="btn btn-small btn-outline" data-modal="loginModal">Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> FREE FIRE ESPORTS PLATFORM</p>
+          <h1>DOMINATE THE<br><em>BATTLEGROUND.</em></h1>
+          <p class="hero-text">
+            Join competitive Free Fire tournaments, build your squad,
+            climb the leaderboard and fight for glory.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#tournaments">Explore Tournaments <span>→</span></a>
+            <a class="btn btn-ghost" href="#rules">View Rules</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong id="heroPlayers">0+</strong><span>Players</span></div>
+            <div><strong id="heroTeams">0+</strong><span>Teams</span></div>
+            <div><strong>24/7</strong><span>Platform</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="live-badge"><span></span> LIVE TOURNAMENT</div>
+          <div class="hero-card-art">
+            <div class="crosshair"></div>
+            <div class="hero-character">FF</div>
+          </div>
+          <div class="hero-card-info">
+            <div>
+              <span class="muted">NEXT BATTLE</span>
+              <h3>FARAVHI BATTLE ROYALE</h3>
+            </div>
+            <div class="hero-mini-stats">
+              <span><b id="heroPrize">00</b><small>PRIZE POOL</small></span>
+              <span><b id="heroEntry">00</b><small>ENTRY FEE</small></span>
+            </div>
+          </div>
+          <a href="#register" class="btn btn-primary full">Register Your Squad</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span>FREE FIRE TOURNAMENT</span><b>✦</b><span>TOURNAMENT BY FARAVHI</span><b>✦</b>
+        <span>BUILD YOUR SQUAD</span><b>✦</b><span>FIGHT FOR GLORY</span><b>✦</b>
+        <span>FREE FIRE TOURNAMENT</span><b>✦</b><span>TOURNAMENT BY FARAVHI</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="section" id="tournaments">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> COMPETE</p>
+            <h2>UPCOMING <em>TOURNAMENTS</em></h2>
+          </div>
+          <a href="#register" class="text-link">Register a Team →</a>
+        </div>
+
+        <div class="tournament-grid" id="tournamentGrid"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="leaderboard">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> RESULTS</p>
+            <h2>LIVE <em>LEADERBOARD</em></h2>
+          </div>
+          <span class="status-pill"><span></span> Updating Live</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Team</th><th>Booyah</th><th>Kills</th><th>Placement</th><th>Total</th></tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teams">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> COMMUNITY</p>
+            <h2>REGISTERED <em>TEAMS</em></h2>
+          </div>
+        </div>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="register">
+      <div class="container register-layout">
+        <div class="register-copy">
+          <p class="eyebrow"><span></span> YOUR JOURNEY STARTS HERE</p>
+          <h2>READY TO<br><em>DROP IN?</em></h2>
+          <p>Register your squad and get ready for the next Faravhi tournament. All information can be updated from the admin system later.</p>
+          <div class="check-list">
+            <span>✓ Squad registration</span>
+            <span>✓ Player UID verification</span>
+            <span>✓ Payment reference</span>
+            <span>✓ Tournament room details</span>
+          </div>
+        </div>
+
+        <form class="register-form" id="registrationForm">
+          <div class="form-header">
+            <div>
+              <span class="muted">TOURNAMENT</span>
+              <h3>REGISTER YOUR SQUAD</h3>
+            </div>
+            <span class="required">* Required</span>
+          </div>
+
+          <label>Team Name *<input required name="teamName" placeholder="Enter team name"></label>
+          <div class="form-row">
+            <label>Captain Name *<input required name="captain" placeholder="Captain name"></label>
+            <label>Phone Number *<input required name="phone" type="tel" placeholder="01XXXXXXXXX"></label>
+          </div>
+          <div class="form-row">
+            <label>Captain UID *<input required name="uid" placeholder="Free Fire UID"></label>
+            <label>Player Count
+              <select name="players">
+                <option value="4">4 Players</option>
+                <option value="3">3 Players</option>
+                <option value="2">2 Players</option>
+                <option value="1">Solo</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Payment Method
+              <select name="payment">
+                <option>bKash</option><option>Nagad</option><option>Free Entry</option>
+              </select>
+            </label>
+            <label>Transaction ID<input name="transaction" placeholder="If applicable"></label>
+          </div>
+          <label>Player UIDs / IGN
+            <textarea name="roster" rows="4" placeholder="Player 1: IGN — UID&#10;Player 2: IGN — UID&#10;Player 3: IGN — UID&#10;Player 4: IGN — UID"></textarea>
+          </label>
+          <label class="upload-label">Payment / Proof Screenshot
+            <input type="file" accept="image/*" id="proofFile">
+          </label>
+          <button class="btn btn-primary full" type="submit">Submit Registration <span>→</span></button>
+          <p class="form-note">Demo mode: submissions are stored in this browser only until a real backend is connected.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="rules">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> PLAY FAIR</p>
+            <h2>TOURNAMENT <em>RULES</em></h2>
+          </div>
+        </div>
+        <div class="rules-grid">
+          <article><span>01</span><h3>Fair Play</h3><p>No hacks, scripts, modified clients or unauthorized third-party tools.</p></article>
+          <article><span>02</span><h3>Team Check-in</h3><p>Captains must complete check-in before the published deadline.</p></article>
+          <article><span>03</span><h3>Room Rules</h3><p>Room ID and password must not be shared outside registered players.</p></article>
+          <article><span>04</span><h3>Proof & Disputes</h3><p>Keep screenshots and match evidence for disputes or result verification.</p></article>
+          <article><span>05</span><h3>Connection</h3><p>Players are responsible for their own device and internet connection.</p></article>
+          <article><span>06</span><h3>Organizer Decision</h3><p>Official tournament decisions and rule updates will be announced on the platform.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section winners alt" id="winners">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> HALL OF FAME</p>
+            <h2>PREVIOUS <em>WINNERS</em></h2>
+          </div>
+        </div>
+        <div class="winner-grid">
+          <article class="winner-card first"><span class="rank">01</span><div class="winner-cup">♛</div><h3>LIL STAR'S</h3><p>Champion</p><strong>Prize: 00</strong></article>
+          <article class="winner-card"><span class="rank">02</span><div class="winner-cup">◆</div><h3>IRON PARADISE</h3><p>Runner Up</p><strong>Prize: 00</strong></article>
+          <article class="winner-card"><span class="rank">03</span><div class="winner-cup">◆</div><h3>DEATH WALKERS</h3><p>3rd Place</p><strong>Prize: 00</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section announcement">
+      <div class="container announcement-box">
+        <div><p class="eyebrow"><span></span> STAY UPDATED</p><h2>NEVER MISS A <em>DROP.</em></h2><p>Get tournament announcements and room updates.</p></div>
+        <form id="subscribeForm"><input type="email" required placeholder="Enter your email"><button class="btn btn-primary">Subscribe</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="brand">
+        <span class="brand-mark">F</span><span><strong>TOURNAMENT</strong><small>BY FARAVHI</small></span>
+      </div>
+      <p>Competitive Free Fire tournaments built for squads who want to compete.</p>
+      <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="Discord">◉</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Tournament by Faravhi. All rights reserved.</span><span>Free Fire is a trademark of Garena.</span></div>
+  </footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" data-close>×</button>
+      <p class="eyebrow"><span></span> ACCOUNT</p>
+      <h2>WELCOME <em>BACK</em></h2>
+      <form id="loginForm">
+        <label>Email / Phone<input required placeholder="Enter email or phone"></label>
+        <label>Password<input required type="password" placeholder="••••••••"></label>
+        <button class="btn btn-primary full">Login</button>
+      </form>
+      <p class="modal-note">Demo interface — connect Firebase/Supabase/backend for real authentication.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
